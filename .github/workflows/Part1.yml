@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version:  [3.11]
+        python-version: [3.11]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -26,6 +26,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
 
-      - name: Run specified tests
+      - name: Run all tests
         run: |
-          python -m pytest "prova_escrita_05.py" "Torra_Oriol-pytest (1).py"
+          python -m pytest
